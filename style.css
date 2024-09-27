@@ -1,0 +1,106 @@
+/* Combining CSS Selectors */
+h1, h2 {
+    font-family: Arial, sans-serif;
+    color: darkblue;
+}
+
+/* CSS Positioning */
+img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    float: left;
+}
+
+/* CSS Display */
+p, ul {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Work Experience Section - Flexbox */
+.work-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.date {
+    float: right;
+    margin-left: 20px; 
+    font-style: italic;
+    color: gray;
+}
+
+ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.work-experience ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.work-experience li {
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+/* Skills Section - Grid */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.skills li {
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Links Section - Flexbox */
+ul.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Float - remove to avoid issues */
+ul li {
+    float: none;
+    width: auto;
+    list-style-type: none;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+    img {
+        position: static;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .work-experience ul {
+        flex-direction: column;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    ul.links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
